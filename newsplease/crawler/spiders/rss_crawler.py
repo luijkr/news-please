@@ -48,8 +48,7 @@ class RssCrawler(scrapy.Spider):
 
         :param obj response: The scrapy response
         """
-        yield scrapy.Request(self.helper.url_extractor.get_rss_url(response),
-                             callback=self.rss_parse)
+        yield scrapy.Request(self.original_url, callback=self.rss_parse)
 
     def rss_parse(self, response):
         """
