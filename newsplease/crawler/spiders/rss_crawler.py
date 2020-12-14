@@ -104,4 +104,4 @@ class RssCrawler(scrapy.Spider):
         response = urllib2.urlopen(redirect).read()
 
         # Check if a standard rss feed exists
-        return re.search(re_rss, response.decode('utf-8')) is not None
+        return True # re.search(re_rss, response.decode('utf-8')) is not None
