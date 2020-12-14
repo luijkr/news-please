@@ -37,7 +37,8 @@ class RssCrawler(scrapy.Spider):
 
         self.ignored_allowed_domain = self.helper.url_extractor \
             .get_allowed_domain(url)
-        self.start_urls = [self.helper.url_extractor.get_start_url(url)]
+        # self.start_urls = [self.helper.url_extractor.get_start_url(url)]
+        self.start_urls = [url]
 
         super(RssCrawler, self).__init__(*args, **kwargs)
 
